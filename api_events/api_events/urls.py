@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from django.conf.urls import url
 from rest_framework.authtoken.views import obtain_auth_token
 from events import views
@@ -22,5 +24,15 @@ from events import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
-    url(r'^users/register',views.UserCreate.as_view()),
+    url(r'logout/', views.Logout.as_view()),
+    url(r'^users/register/',views.UserCreate.as_view()),
+    url(r'^event/(?P<pk>[0-9]+)/', views.EventDetail.as_view()),
+    url(r'^event/', views.EventView.as_view()),
+    url(r'^events/(?P<ini>[0-9]+)/(?P<fin>[0-9]+)/', views.EventList.as_view()),
+    url(r'^interaction/post/', views.InteractionCreate.as_view()),
+    url(r'^comment/post/', views.CommentCreate.as_view()),
+    url(r'^response/post/', views.ResponseCreate.as_view()),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
