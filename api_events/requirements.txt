@@ -45,7 +45,7 @@ cycler==0.10.0
 decorator==4.4.1
 defusedxml==0.6.0
 diff-match-patch==20181111
-Django==2.1.5
+Django==3.1.6
 docker==3.6.0
 docker-compose==1.23.2
 docker-pycreds==0.4.0
