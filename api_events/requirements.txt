@@ -153,7 +153,7 @@ qtconsole==4.6.0
 QtPy==1.9.0
 requests==2.22.0
 rope==0.14.0
-rsa==3.4.2
+rsa==4.7
 Rtree==0.8.3
 ruamel-yaml==0.15.87
 s3transfer==0.2.1
