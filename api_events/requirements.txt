@@ -103,7 +103,7 @@ navigator-updater==0.2.1
 nbconvert==5.6.1
 nbformat==4.4.0
 notebook==6.0.2
-numpy==1.16.4
+numpy==1.22.0
 numpydoc==0.9.1
 olefile==0.46
 opencv-python==4.1.0.25
